@@ -9,6 +9,7 @@
   "author": "nguoinaodo",
   "license": "MIT",
   "dependencies": {
+    "bl": "^1.1.2",
     "express": "^4.14.0"
   }
 }
