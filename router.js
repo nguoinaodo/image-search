@@ -9,6 +9,9 @@ MongoClient.connect(mongoURI, function(err, db) {
     if (err) console.log('err1');
     var latest = db.collection('latest');
     
+    router.get('/', function(req, res) {
+        res.sendFile(__dirname + '/public/home.html'); 
+    });
     router.use('/api/imagesearch', function(req, res, next) {
         var params = req.url.substr(1).split('?');
         var option = {
