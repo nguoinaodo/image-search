@@ -20,7 +20,7 @@ MongoClient.connect(mongoURI, function(err, db) {
             path: '/bing/v5.0/images/search?q=' + params[0] + '&count=5&' + params[1] + '&safeSearch=Moderate',
             method: 'GET',
             headers: {
-                'Ocp-Apim-Subscription-Key': 'f16ea4b024cd47a3b23de993ff14ced7'
+                'Ocp-Apim-Subscription-Key': process.env.SEARCH_KEY
             }
         };
         var result = [];
